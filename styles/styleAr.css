@@ -7,7 +7,6 @@ body {
 	font-family: "Quicksand", sans-serif;
 	font-size: 62.5%;
 	font-size: 10px;
-    background-color: #ecf1ff;
 }
 /*-- Inspiration taken from abdo steif -->
 /* --> https://codepen.io/abdosteif/pen/bRoyMb?editors=1100*/
@@ -31,12 +30,12 @@ body {
 
 .nav div.logo a {
 	text-decoration: none;
-	color: #f1e1ff;
+	color: #550d39;
 	font-size: 2.5rem;
 }
 
 .nav div.logo a:hover {
-	color: #cbd8ff;
+	color: #1a3797;
 }
 
 .nav div.main_list {
@@ -62,139 +61,50 @@ body {
 
 .nav div.main_list ul li a {
 	text-decoration: none;
-	color: #cbd6fd;
+	color: #550d39;
 	line-height: 65px;
 	font-size: 2.4rem;
 }
 
 .nav div.main_list ul li a:hover {
-	color: #f28bfc;
+	color: #1a3797;
 }
 
 /* Home section */
 
 .home {
 	width: 100%;
-	height: 95vh;
-	background-color: #ecf1ff;
+	height: 10vh;
 	background-position: center top;
 	background-size: cover;
-    padding-bottom: 10vh;
-}
-@import url(//fonts.googleapis.com/css?family=Lato:300:400);
-
-body {
-  margin:0;
-}
-
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight:300;
-  letter-spacing: 2px;
-  font-size:48px;
-}
-p {
-  font-family: 'Lato', sans-serif;
-  letter-spacing: 1px;
-  font-size:14px;
-  color: #4759c2;
-}
-
-.header {
-  position:static;
-  text-align:center;
-  background: linear-gradient(60deg, rgb(183, 58, 152) 0%, rgb(84, 0, 193) 100%);
-  color:#ecf1ff;
 }
 
 
-.inner-header {
-  height:60vh;
-  width:100%;
-  margin: 0;
-  padding: 0;
-}
 
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 10%;
-}
-
-.waves {
-  position:relative;
-  width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-  color:#ecf1ff;
-
-}
-
-.content {
-    position: absolute;
-    height:20vh;
-    text-align:center;
-    color: #000;
-    background-color: #ecf1ff;
-  }
-
-/* Animation */
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
-}
 /*Para verlo en el teléfono*/
 @media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
+    .waves {
+      height:40px;
+      min-height:40px;
+    }
+    .content {
+      height:30vh;
+    }
+    h1 {
+      font-size:24px;
+    }
   }
-  .content {
-    height:30vh;
+  .navTrigger {
+      display: none;
   }
-  h1 {
-    font-size:24px;
+  
+  .nav {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      -webkit-transition: all 0.4s ease;
+      transition: all 0.4s ease;
   }
-}
-.navTrigger {
-	display: none;
-}
-
-.nav {
-	padding-top: 20px;
-	padding-bottom: 20px;
-	-webkit-transition: all 0.4s ease;
-	transition: all 0.4s ease;
-}
+  
 
 /* Media qurey section */
 
@@ -227,7 +137,7 @@ p {
 		right: 0;
 		left: 0;
 		bottom: 0;
-		background-color: #643ebd;
+		background-color: #ffffff;
 		/*same background color of navbar*/
 		background-position: center top;
 	}
@@ -261,7 +171,7 @@ p {
 }
 
 .navTrigger i {
-	background-color: #f4e2fa;
+	background-color: #c23d74;
 	border-radius: 2px;
 	content: "";
 	display: block;
@@ -440,86 +350,107 @@ p {
 
 .affix {
 	padding: 0;
-	background-color: rgb(116, 0, 193);
+	background-color: #f0afaf;
 }
 
-
+.myH2 {
+	text-align: center;
+	font-size: 4rem;
+}
+.myP {
+	text-align: justify;
+	padding-left: 15%;
+	padding-right: 15%;
+	font-size: 20px;
+}
 @media all and (max-width: 700px) {
 	.myP {
 		padding: 2%;
 	}
 }
 
-
-.p {
-	text-align: justify;
-	padding-left: 15%;
-	padding-right: 40%;
-    color: #4759c2;
-
-}
-
-
-table {
-
-    width: 90%;
-    border-collapse: collapse;
-    border: 3px ;
-	border-top: 30px;
-    padding: 70vh 5vw 2px;
-    text-align: center;
-	position:static;
-	margin: 15px;
-	
+.fotos {
+	max-width: 600vw;
+	margin: 5% auto;
+	padding: 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-sizing: border-box;
+	box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
   }
   
-  thead th:nth-child(1) {
-    width: 30%;
+  .text-center {
+	text-align: center;
+	margin-bottom: 1em;
   }
   
-  thead th:nth-child(2) {
-    width: 20%;
+  .lightbox-gallery {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
   }
   
-  thead th:nth-child(3) {
-    width: 15%;
+  .lightbox-gallery div > img {
+	max-width: 100%;
+	display: block;
   }
   
-  thead th:nth-child(4) {
-    width: 35%;
+  .lightbox-gallery div {
+	margin: 10px;
+	flex-basis: 180px;
   }
   
-  th, td {
-    padding: 20px;
-
-  }
-
-  html {
-    font-family: 'Varela Round', sans-serif;
-    
+  @media only screen and (max-width: 500px) {
+	.lightbox-gallery {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  
+	.lightbox > div {
+	  margin-bottom: 10px;
+	}
   }
   
-  thead th, tfoot th {
-    font-family: 'Rock Salt', cursive;
-
+  /*Lighbox CSS*/
+  
+  .lightbox {
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	padding-top: 30px;
+	box-sizing: border-box;
   }
   
-  th {
-    letter-spacing: 2px;
+  .lightbox img {
+	display: block;
+	margin: auto;
   }
   
-  td {
-    letter-spacing: 1px;
+  .lightbox .caption {
+	margin: 15px auto;
+	width: 50%;
+	text-align: center;
+	font-size: 1em;
+	line-height: 1.5;
+	font-weight: 700;
+	color: #eee;
   }
   
-  tbody td {
-    text-align: left;
+  .github-link {
+	font-size: 18px;
+	color: rgba(255, 255, 255, 0.7);
   }
   
-  tfoot th {
-    text-align: right;
+  .github-link:hover,
+  .github-link:active,
+  .github-link:visited {
+	color: #fff;
+	text-decoration: none;
   }
-
-img{
-	padding: 4%;
-}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos</title>
+    <link href="styles/styleAr.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/ico" href="favicon/favicon.ico"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Patitas en la calle</a>
+            </div>
+            <div id="mainListDiv" class="main_list">
+                <ul class="navlinks">
+                    <li><a href="equipo.html">Conócenos</a></li>
+                    <li><a href="Refugios.html">¿Cómo ayudar?</a></li>
+                    <li><a href="https://www.uamproyectos.xyz/patita/mapa/">Mapa</a></li>
+                    <li><a href="arc/archivo.html">Documentación</a></li>
+                </ul>
+            </div>
+            <span class="navTrigger">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </div>
+    </nav>
+
+    <section class="home">
+
+    </section>
+    <div class="fotos">
+        <h2 class="text-center">Nos encontraron en el camino</h2>
+        <div class="lightbox-gallery">
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/bolita.jpg"  alt="perrito hecho bolita"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/centro.jpg"  alt="perrito del centro"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/wilson.jpg" alt="Wilson"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/manada.jpg"  alt="manada de perritos a fuera de la escuela"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/cachorro.jpg"  alt="cachorrito en una caja"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/blanco.jpg"  alt="perrito blanco con café"></div>
+            
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/calle.jpg"  alt="perrito en carretera"></div>
+            
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/escuela.jpg"  alt="manada cerca de la escuela"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/orejas.jpg"  alt="perrito en un hueco"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/canelo.jpg"  alt="canelo"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/canelob.jpg"  alt="canelo 2"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/refugio.jpg"  alt="perrito en refugio"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/refugiob.jpg"  alt="perrito en refugio"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/bigotes.jpg"  alt="bigotes"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/casa.jpg"  alt="perritos"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/casaa.jpg"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/casab.jpg"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/casac.jpg"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/esc.jpg"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/pape.jpg"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/pelea.jpg"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/puesto.jpg"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/quesadilla.jpg"></div>
+            <div><img src="https://raw.githubusercontent.com/Vaaal0/fotos-perritos/main/wil.jpg"></div>
+        </div>
+      </div>
+    
+    
+    <div class="text-center github-link">
+      
+      <a class="github-link" href="https://github.com/humbl3man/lightboxify" target="_blank"><i class="fa fa-github"></i> Github Source Code</a>
+      
+    </div>
+<!-- Jquery needed -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="js/scripts.js"></script>
+
+<!-- Function used to shrink nav bar removing paddings and adding black background -->
+<script>
+    $(window).scroll(function() {
+        if ($(document).scrollTop() > 50) {
+            $('.nav').addClass('affix');
+            console.log("OK");
+        } else {
+            $('.nav').removeClass('affix');
+        }
+    });
+</script>
+</body>
+</html>
