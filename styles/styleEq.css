@@ -463,13 +463,12 @@ p {
 table {
 
     width: 90%;
-    border-collapse: collapse;
     border: 3px ;
-	border-top: 30px;
-    padding: 70vh 5vw 2px;
+	top:auto;
+    padding: 80vh 5vw 2px;
     text-align: center;
-	position:static;
 	margin: 15px;
+	z-index: 1;
 	
   }
   
