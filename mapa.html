@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mapa</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet">
+<link rel="icon" type="image/ico" href="favicon/favicon.ico"/>
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+.marker {
+    background-color: rgb(95, 116, 208); /* Change color as needed */
+    width: 20px;
+    border: 2px solid white; /* White border */
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Floating label style */
+.floating-label {
+    position: absolute;
+    top: 20px; /* Adjust as needed */
+    left: 20px; /* Adjust as needed */
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+    font-family: "Quicksand", sans-serif;
+    text-decoration: none;
+	color: #550d39;
+	font-size: 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1; /* Ensure it is above the map */
+}
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<!-- Floating label -->
+<div class="floating-label" onclick="window.open('index.html', '_blank')">
+    Patitas en la calle
+</div>
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoidmFhYWxhZ3VpbCIsImEiOiJjbGo2NzhpMjYwZnZmM3FreG1hOWNxMXlrIn0.P0SKixxpDVbWAa9zrCSutg';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        center: [-99.511957, 19.289632], // starting position [lng, lat]
+        zoom: 14 // starting zoom
+    });
+
+    // GeoJSON object with marker data
+    const markers = [
+        {
+            coordinates: [-99.507989, 19.291244],
+            title: 'Wilson',
+            imageUrl: 'https://github.com/Vaaal0/fotos-perritos/blob/main/canelo.jpg?raw=true',
+            link: 'https://vaaal0.github.io/Historias/' // Link for Wilson
+        },
+        {
+            coordinates: [-99.511159, 19.286139],
+            title: 'El Solovino',
+            imageUrl: 'https://github.com/Vaaal0/fotos-perritos/blob/main/cachorro.jpg?raw=true',
+            link: 'https://example.com/el-solovino' // Link for El Solovino
+        },
+        {
+            coordinates: [-99.517990, 19.292349],
+            title: 'El güero',
+            imageUrl: 'https://github.com/Vaaal0/fotos-perritos/blob/main/bolita.jpg?raw=true',
+            link: 'https://example.com/el-guero' // Link for El güero
+        },
+        {
+            coordinates: [-99.502657, 19.294495],
+            title: 'La gorda',
+            imageUrl: 'https://github.com/Vaaal0/fotos-perritos/blob/main/bigotes.jpg?raw=true',
+            link: 'https://example.com/la-gorda' // Link for La gorda
+        }
+    ];
+
+    // Add markers to the map
+    markers.forEach(marker => {
+        const el = document.createElement('div');
+        el.className = 'marker';
+
+        // Create popup content with clickable image
+        const popupContent = marker.imageUrl 
+            ? '<h3>' + marker.title + '</h3><a href="' + marker.link + '" target="_blank"><img src="' + marker.imageUrl + '" alt="' + marker.title + '" style="width:100%; height:auto;" /></a>'
+            : '<h3>' + marker.title + '</h3><p>' + marker.description + '</p>';
+
+        // Create marker and set its popup
+        new mapboxgl.Marker(el)
+            .setLngLat(marker.coordinates)
+            .setPopup(new mapboxgl.Popup({ offset: 10 })
+                .setHTML(popupContent)) // Use the constructed popup content
+            .addTo(map);
+    });
+</script>
+</body>
+</html>
